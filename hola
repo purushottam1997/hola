@@ -1,0 +1,85 @@
+#include<stdio.h>
+int main()
+{
+int x = 1;
+int g=0.05;
+int fare;
+int d[]={50,40,30,60};
+int r[]={8,10,12,15};
+printf("welcome to Hola app\n");
+printf(" ur location is chennai central\n");
+printf(" press 1 for sathyabama\n");
+printf(" press 2 for tambaram\n");
+printf(" press 3 for padur\n");
+scanf("%d", &x);
+   switch (x)   
+   {
+       case 1: printf("Choice is sathyabama\n");
+               break;      
+       case 2: printf("Choice is tambaram\n");
+                break;
+       case 3: printf("Choice is padur\n");
+               break;
+       default: printf("Choice other than sathyabama, tambaram and padur not possible\n");
+                break;
+   }
+printf("press 1 for auto\n");
+printf("press 2 for mini\n");
+printf("press 3 for micro\n");
+printf("press 4 for Suv\n");
+scanf("%d", &x);
+switch (x)   
+   {
+       case 1: printf("Choice is auto\n");
+               break;      
+       case 2: printf("Choice is mini\n");
+                break;
+       case 3: printf("Choice is micro\n");
+               break;
+       case 4: printf("choice is suv");
+	           break;       
+       default: printf("Choice other than micro,suv,mini,auto not possible\n");
+                break;
+   }
+   
+printf("fare estimation for first 5 km 10rs/km then 15rs/km\n");
+printf("please confirm ur vehicle again\n");   
+scanf("%d", &x);
+switch (x)   
+   {
+       case 1:
+       	 fare=g*d[0]*r[0];
+	    printf("Choice is auto so fare is %d,fare\n");
+               break;      
+       case 2:
+	     fare=g*d[1]*r[1];
+	    printf("Choice is mini so fare is %d,fare\n");
+                break;
+       case 3: 
+	     fare=g*d[2]*r[2];
+	   printf("Choice is micro so fare is %d,fare\n");
+               break;
+       case 4: 
+	     fare=g*d[3]*r[3];
+	   printf("choice is suv so fare is %d,fare\n");
+	           break;       
+       default: printf("Choice other than micro,suv,mini,auto not possible\n");
+                break;     
+   }
+printf("to confirm ur cab press 1\n");   
+printf("to cancel ur cab press 2\n");  
+scanf("%d", &x);
+switch (x)   
+   {
+       case 1:
+	    printf("ur cab is confirmed happy journey\n");
+               break;      
+       case 2:
+	    printf("u cancelled see u next time\n");
+                break;
+		default: printf("try again\n");
+                break;
+   }
+printf("happy to serve u\n");     
+return 0; 
+}

@@ -1,85 +1,47 @@
 #include<stdio.h>
+
 int main()
 {
-int x = 1;
-int g=0.05;
-int fare;
-int d[]={50,40,30,60};
-int r[]={8,10,12,15};
-printf("welcome to Hola app\n");
-printf(" ur location is chennai central\n");
-printf(" press 1 for sathyabama\n");
-printf(" press 2 for tambaram\n");
-printf(" press 3 for padur\n");
-scanf("%d", &x);
-   switch (x)   
-   {
-       case 1: printf("Choice is sathyabama\n");
-               break;      
-       case 2: printf("Choice is tambaram\n");
-                break;
-       case 3: printf("Choice is padur\n");
-               break;
-       default: printf("Choice other than sathyabama, tambaram and padur not possible\n");
-                break;
-   }
-printf("press 1 for auto\n");
-printf("press 2 for mini\n");
-printf("press 3 for micro\n");
-printf("press 4 for Suv\n");
-scanf("%d", &x);
+    int x;
+	unsigned int fair;
+    unsigned short d1,d2,distance;
+    unsigned short v;
+    int mode[4]={100,80,200,150};
+    int dist[5][5]={
+        {0,40,25,10,15},
+        {40,0,28,35,20},
+        {25,28,0,19,32},
+        {10,35,19,0,16},
+        {15,20,32,16,0}
+    };
+    printf("Welcome to HOLA Cabs!\n Please select your source\n. You have the following choices for ur location:\n");
+    printf("Jannat-0,\n Mannat-1,\n Narak-2,\n Home-3,\n Sathyabama College-4\n");
+    scanf("%d",&d1);
+    printf("Please enter your destination.\n You have the following places where u can go:\n");
+    printf("Jannat-0,\n Mannat-1,\n Narak-2,\n Home-3,\n Sathyabama College-4\n");
+    scanf("%d",&d2);
+    distance=dist[d1][d2];
+    printf("Please enter your prefered ride. You have the following choices:\n");
+    printf("Audi-0,\n BMW-1,\n Helicopter-2,\n LORRY-3\n");
+    scanf("%d",&v);
+    fair=distance*mode[v];
+    printf("Your fair is\t %d.\n",fair);
+    printf("please confirm ur sawari\n");
+    printf("press 1 to confirm ride\n");
+    printf("press 2 to cancel ur ride\n");
+    printf("press 3 if u were doing time pass\n");
+    scanf("%d", &x);
 switch (x)   
    {
-       case 1: printf("Choice is auto\n");
+       case 1: printf("ur ride has been confirmed\n");
                break;      
-       case 2: printf("Choice is mini\n");
+       case 2: printf("ur ride has been cancelled\n");
                 break;
-       case 3: printf("Choice is micro\n");
-               break;
-       case 4: printf("choice is suv");
-	           break;       
-       default: printf("Choice other than micro,suv,mini,auto not possible\n");
+       case 3: printf("Chalo bey headphone lagao chalkey jao\n");
+	            break;         
+       default: printf("retry from beginning\n");
                 break;
    }
-   
-printf("fare estimation for first 5 km 10rs/km then 15rs/km\n");
-printf("please confirm ur vehicle again\n");   
-scanf("%d", &x);
-switch (x)   
-   {
-       case 1:
-       	 fare=g*d[0]*r[0];
-	    printf("Choice is auto so fare is %d,fare\n");
-               break;      
-       case 2:
-	     fare=g*d[1]*r[1];
-	    printf("Choice is mini so fare is %d,fare\n");
-                break;
-       case 3: 
-	     fare=g*d[2]*r[2];
-	   printf("Choice is micro so fare is %d,fare\n");
-               break;
-       case 4: 
-	     fare=g*d[3]*r[3];
-	   printf("choice is suv so fare is %d,fare\n");
-	           break;       
-       default: printf("Choice other than micro,suv,mini,auto not possible\n");
-                break;     
-   }
-printf("to confirm ur cab press 1\n");   
-printf("to cancel ur cab press 2\n");  
-scanf("%d", &x);
-switch (x)   
-   {
-       case 1:
-	    printf("ur cab is confirmed happy journey\n");
-               break;      
-       case 2:
-	    printf("u cancelled see u next time\n");
-                break;
-		default: printf("try again\n");
-                break;
-   }
-printf("happy to serve u\n");     
-return 0; 
+    printf("HOLA aa raha hai. see u soon in hell.");
+    return 0;
 }
